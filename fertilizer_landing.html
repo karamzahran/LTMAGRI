@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LTM AGRI — Premium Moroccan Fertilizers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;color:#fff;background:#0a0f0a;scroll-behavior:smooth}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#0a0f0a}
+::-webkit-scrollbar-thumb{background:#c8a84b;border-radius:3px}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 5%;background:rgba(10,15,10,0.97);border-bottom:1px solid rgba(200,168,75,0.15);position:sticky;top:0;z-index:200;backdrop-filter:blur(16px)}
+.logo-wrap{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-svg{width:40px;height:40px}
+.logo-name{display:flex;flex-direction:column;line-height:1.1}
+.logo-ltm{font-size:1.1rem;font-weight:900;color:#fff;letter-spacing:3px}
+.logo-agri{font-size:0.6rem;font-weight:700;color:#c8a84b;letter-spacing:4px}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.6);font-weight:500;font-size:0.82rem;transition:color 0.2s;letter-spacing:0.5px}
+.nav-links a:hover{color:#c8a84b}
+.nav-cta{background:#c8a84b!important;color:#0a0f0a!important;padding:0.45rem 1.1rem;border-radius:5px;font-weight:800!important;font-size:0.78rem!important}
+
+/* LANG TOGGLE */
+.lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:3px}
+.lang-btn{background:none;border:none;color:rgba(255,255,255,0.45);font-size:0.72rem;font-weight:700;padding:4px 8px;border-radius:3px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s}
+.lang-btn.active{background:#c8a84b;color:#0a0f0a}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#060a06 0%,#0a1a0a 50%,#0f2010 100%);padding:6rem 5% 4.5rem;display:flex;align-items:center;gap:5rem;min-height:90vh;border-bottom:1px solid rgba(200,168,75,0.1)}
+.hero-left{flex:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.35);color:#c8a84b;padding:0.4rem 1rem;border-radius:4px;font-size:0.7rem;font-weight:700;margin-bottom:1.8rem;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:3rem;font-weight:900;line-height:1.1;margin-bottom:1.2rem;letter-spacing:-1.5px}
+.hero h1 em{color:#c8a84b;font-style:normal}
+.hero-desc{font-size:0.97rem;color:rgba(255,255,255,0.55);max-width:480px;line-height:1.8;margin-bottom:1rem}
+.moq-banner{display:inline-flex;align-items:center;gap:8px;background:rgba(200,168,75,0.06);border-left:3px solid #c8a84b;padding:0.65rem 1rem;border-radius:0 5px 5px 0;font-size:0.8rem;color:rgba(255,255,255,0.65);margin-bottom:2rem;font-weight:600}
+.moq-banner strong{color:#c8a84b}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{background:#c8a84b;color:#0a0f0a;padding:0.8rem 1.7rem;border-radius:6px;font-weight:800;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none;cursor:pointer}
+.btn-gold:hover{background:#b8943a;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.75);padding:0.8rem 1.7rem;border-radius:6px;font-weight:600;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;cursor:pointer;background:none}
+.btn-ghost:hover{border-color:#c8a84b;color:#c8a84b}
+.hero-stats{display:flex;gap:3rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08)}
+.stat-n{font-size:2rem;font-weight:900;color:#c8a84b}
+.stat-l{font-size:0.68rem;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+.hero-right{flex:0 0 280px;display:flex;flex-direction:column;gap:1rem}
+.hcard{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1.1rem 1.3rem}
+.hcard.gold{border-color:rgba(200,168,75,0.45);background:rgba(200,168,75,0.05)}
+.hcard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem}
+.hcard h3{font-size:1.2rem;font-weight:900}
+.hcard-tag{font-size:0.6rem;font-weight:800;padding:3px 8px;border-radius:3px;letter-spacing:1px;text-transform:uppercase}
+.tag-gold{background:#c8a84b;color:#0a0f0a}
+.tag-green{background:rgba(74,143,90,0.2);color:#6aaf7a}
+.hcard p{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5}
+
+/* SECTIONS */
+section{padding:4.5rem 5%}
+.eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:3px;color:#c8a84b;text-transform:uppercase;margin-bottom:0.7rem}
+.sec-title{font-size:1.9rem;font-weight:900;letter-spacing:-0.5px;margin-bottom:0.8rem}
+.sec-sub{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.75;max-width:520px}
+.sec-head{margin-bottom:2.8rem}
+
+/* CATALOG */
+.catalog{background:#080d08}
+.catalog-tabs{display:flex;gap:0.4rem;margin-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.07);padding-bottom:0}
+.ctab{background:none;border:none;color:rgba(255,255,255,0.4);font-size:0.82rem;font-weight:600;padding:0.75rem 1.3rem;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;letter-spacing:0.5px;margin-bottom:-1px}
+.ctab.active{color:#c8a84b;border-bottom-color:#c8a84b}
+.catalog-panel{display:none}
+.catalog-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+
+.prod-main{background:#0f160f;border:1px solid rgba(200,168,75,0.2);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden}
+.prod-main::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.pm-tsp::before{background:linear-gradient(90deg,#c8a84b,#e8d070)}
+.pm-dap::before{background:linear-gradient(90deg,#4a8f5a,#6aaf7a)}
+.pm-npk::before{background:linear-gradient(90deg,#4a6f9f,#6a9fcf)}
+.prod-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem;gap:1rem}
+/* GRANULE IMAGE */
+.prod-img-wrap{width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:1.2rem;position:relative;background:#0a0f0a;border:1px solid rgba(255,255,255,0.07)}
+.prod-img-wrap img{width:100%;height:100%;object-fit:cover;opacity:0.85}
+.prod-img-label{position:absolute;bottom:8px;left:10px;background:rgba(0,0,0,0.6);color:#c8a84b;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:3px;letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(4px)}
+.prod-icon-wrap{width:52px;height:52px;border-radius:10px;border:1px solid rgba(200,168,75,0.2);display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:rgba(200,168,75,0.05);flex-shrink:0}
+.prod-badges{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.pbadge{font-size:0.6rem;font-weight:800;padding:3px 8px;border-radius:3px;letter-spacing:1px;text-transform:uppercase}
+.pbadge-gold{background:#c8a84b;color:#0a0f0a}
+.pbadge-outline{border:1px solid rgba(200,168,75,0.4);color:#c8a84b}
+.prod-name{font-size:1.5rem;font-weight:900;margin-bottom:0.2rem}
+.prod-fullname{font-size:0.72rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;margin-bottom:0.7rem;font-family:monospace}
+.prod-desc{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.2rem}
+.moq-card{background:rgba(200,168,75,0.05);border:1px solid rgba(200,168,75,0.2);border-radius:8px;padding:1rem;display:flex;align-items:center;justify-content:space-between}
+.moq-num{font-size:1.4rem;font-weight:900;color:#c8a84b}
+.moq-label{font-size:0.68rem;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+.moq-note{font-size:0.72rem;color:rgba(255,255,255,0.35);text-align:right;max-width:130px;line-height:1.4}
+.prod-cta{display:flex;gap:0.7rem;margin-top:1.2rem}
+.btn-sm-gold{background:#c8a84b;color:#0a0f0a;padding:0.55rem 1.1rem;border-radius:5px;font-weight:800;font-size:0.78rem;display:inline-flex;align-items:center;gap:5px;cursor:pointer;border:none;transition:all 0.2s}
+.btn-sm-ghost{border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);padding:0.55rem 1.1rem;border-radius:5px;font-weight:600;font-size:0.78rem;display:inline-flex;align-items:center;gap:5px;cursor:pointer;background:none;transition:all 0.2s}
+.btn-sm-ghost:hover{border-color:#c8a84b;color:#c8a84b}
+
+.prod-side{display:flex;flex-direction:column;gap:1rem}
+.tech-card,.use-card{background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1.3rem}
+.tech-card h4,.use-card h4{font-size:0.68rem;font-weight:700;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;margin-bottom:0.9rem}
+.tech-row{display:flex;justify-content:space-between;align-items:center;padding:0.48rem 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.tech-row:last-child{border:none}
+.tech-key{font-size:0.75rem;color:rgba(255,255,255,0.38)}
+.tech-val{font-size:0.78rem;font-weight:700;color:#fff}
+.tech-val.gold{color:#c8a84b}
+.use-item{display:flex;gap:9px;align-items:flex-start;margin-bottom:0.75rem}
+.use-dot{width:20px;height:20px;border-radius:4px;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.2);display:flex;align-items:center;justify-content:center;font-size:0.68rem;flex-shrink:0;margin-top:1px}
+.use-item p{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5}
+.use-item p strong{color:#fff;font-weight:600}
+
+/* EXPORT OPERATIONS */
+.export-ops{background:#0a0f0a}
+.export-ops-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;margin-bottom:3rem}
+.export-text p{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:1rem}
+.export-badges{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.2rem}
+.exp-badge{display:inline-flex;align-items:center;gap:6px;background:#0f160f;border:1px solid rgba(200,168,75,0.2);color:#c8a84b;font-size:0.72rem;font-weight:700;padding:5px 12px;border-radius:4px;letter-spacing:0.5px}
+.export-steps{display:flex;flex-direction:column;gap:0.8rem}
+.exp-step{display:flex;gap:1rem;align-items:flex-start;background:#0f160f;border:1px solid rgba(255,255,255,0.06);border-radius:9px;padding:1rem}
+.exp-step-num{width:28px;height:28px;border-radius:50%;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.3);display:flex;align-items:center;justify-content:center;color:#c8a84b;font-size:0.72rem;font-weight:900;flex-shrink:0}
+.exp-step h5{font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:0.2rem}
+.exp-step p{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.5}
+/* VIDEO SECTION */
+.video-title{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.2rem}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.vid-card{background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color 0.2s;position:relative}
+.vid-card:hover{border-color:rgba(200,168,75,0.35)}
+.vid-thumb{width:100%;height:130px;object-fit:cover;display:block;background:#111}
+.vid-overlay{position:absolute;top:0;left:0;right:0;bottom:40px;display:flex;align-items:center;justify-content:center}
+.vid-play{width:44px;height:44px;background:rgba(200,168,75,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:transform 0.2s}
+.vid-card:hover .vid-play{transform:scale(1.1)}
+.vid-info{padding:0.7rem 0.9rem}
+.vid-label{font-size:0.72rem;font-weight:700;color:#fff}
+.vid-sub{font-size:0.65rem;color:rgba(255,255,255,0.35);margin-top:2px}
+/* video modal */
+.vid-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:999;align-items:center;justify-content:center}
+.vid-modal.open{display:flex}
+.vid-modal-inner{position:relative;width:90%;max-width:800px}
+.vid-modal iframe{width:100%;height:450px;border-radius:10px;border:none}
+.vid-close{position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+
+/* MAP */
+.export-map{background:#080d08}
+.map-wrap{background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;padding:2rem}
+.map-svg-wrap{position:relative;margin-bottom:1.5rem}
+.map-countries{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.2rem}
+.mc{display:inline-flex;align-items:center;gap:6px;background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.2);color:#c8a84b;font-size:0.75rem;font-weight:600;padding:5px 12px;border-radius:20px}
+
+/* QUALITY */
+.quality{background:#0a0f0a}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.q-stats{display:flex;flex-direction:column;gap:0.8rem}
+.qs{display:flex;align-items:center;gap:1rem;background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:9px;padding:1rem}
+.qs-num{font-size:1.8rem;font-weight:900;color:#c8a84b;min-width:65px}
+.qs-text{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5}
+.q-points{display:flex;flex-direction:column;gap:1rem}
+.qp{display:flex;gap:0.9rem}
+.qp-ico{width:38px;height:38px;border-radius:7px;background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.qp h4{font-size:0.88rem;font-weight:700;color:#fff;margin-bottom:0.25rem}
+.qp p{font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.6}
+
+/* CERTS */
+.certs{background:#080d08}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.cert{background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1.3rem;text-align:center;transition:border-color 0.2s}
+.cert:hover{border-color:rgba(200,168,75,0.3)}
+.cert-ico{font-size:1.7rem;margin-bottom:0.7rem}
+.cert-name{font-size:0.85rem;font-weight:700;margin-bottom:0.35rem}
+.cert-desc{font-size:0.73rem;color:rgba(255,255,255,0.4);line-height:1.5}
+.cert-badge{display:inline-block;background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.25);color:#c8a84b;font-size:0.6rem;font-weight:700;padding:3px 8px;border-radius:3px;margin-top:0.7rem;letter-spacing:1.5px;text-transform:uppercase}
+
+/* STATS BAND */
+.stats-band{background:linear-gradient(135deg,#0d1a0d,#0f2010);border-top:1px solid rgba(200,168,75,0.12);border-bottom:1px solid rgba(200,168,75,0.12);padding:3rem 5%}
+.stats-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center}
+.sb-n{font-size:2.2rem;font-weight:900;color:#c8a84b}
+.sb-l{font-size:0.68rem;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:0.4rem}
+
+/* TESTIMONIALS */
+.testi{background:#0a0f0a}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem}
+.tc{background:#0f160f;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.5rem}
+.tc-stars{color:#c8a84b;font-size:0.82rem;letter-spacing:3px;margin-bottom:0.9rem}
+.tc-text{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;font-style:italic;margin-bottom:1.2rem}
+.tc-author{display:flex;align-items:center;gap:0.8rem}
+.tc-av{width:34px;height:34px;border-radius:50%;background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.25);display:flex;align-items:center;justify-content:center;color:#c8a84b;font-weight:800;font-size:0.78rem;flex-shrink:0}
+.tc-name{font-weight:700;font-size:0.83rem}
+.tc-loc{font-size:0.7rem;color:rgba(255,255,255,0.35);margin-top:2px}
+
+/* CONTACT */
+.contact{background:#080d08}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-left{display:flex;flex-direction:column;gap:0.9rem}
+.ci{display:flex;align-items:center;gap:1rem;background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:9px;padding:1.1rem 1.3rem;transition:border-color 0.2s}
+.ci:hover{border-color:rgba(200,168,75,0.3)}
+.ci-ico{width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.ci-wa{background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.2)}
+.ci-ph{background:rgba(200,168,75,0.1);border:1px solid rgba(200,168,75,0.2)}
+.ci-label{font-size:0.63rem;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.35);text-transform:uppercase;margin-bottom:2px}
+.ci-val{font-size:0.93rem;font-weight:700}
+.ci-sub{font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:2px}
+.direct-btns{display:flex;flex-direction:column;gap:0.7rem;margin-top:0.3rem}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;padding:0.85rem;border-radius:7px;font-weight:800;font-size:0.88rem;transition:all 0.2s}
+.wa-btn:hover{background:#1db954;transform:translateY(-2px)}
+.call-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.3);color:#c8a84b;padding:0.85rem;border-radius:7px;font-weight:700;font-size:0.88rem;transition:all 0.2s}
+.call-btn:hover{background:rgba(200,168,75,0.15)}
+
+/* FORM */
+.contact-form{background:#0f160f;border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:1.8rem}
+.contact-form h3{font-size:0.95rem;font-weight:700;margin-bottom:1.3rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-bottom:0.9rem}
+.form-group{display:flex;flex-direction:column;gap:0.35rem;margin-bottom:0.9rem}
+.form-group label{font-size:0.68rem;font-weight:700;color:rgba(255,255,255,0.38);letter-spacing:1px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{background:#080d08;border:1px solid rgba(255,255,255,0.09);border-radius:5px;padding:0.65rem 0.85rem;color:#fff;font-size:0.85rem;font-family:inherit;transition:border-color 0.2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(200,168,75,0.5)}
+.form-group select option{background:#0f160f}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-submit{width:100%;background:#c8a84b;color:#0a0f0a;padding:0.8rem;border-radius:6px;font-weight:800;font-size:0.88rem;border:none;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.form-submit:hover{background:#b8943a}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed}
+.form-note{font-size:0.7rem;color:rgba(255,255,255,0.28);text-align:center;margin-top:0.7rem}
+.form-success{display:none;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);border-radius:7px;padding:0.9rem;text-align:center;color:#25d366;font-size:0.85rem;font-weight:600;margin-top:0.8rem}
+.form-error{display:none;background:rgba(220,50,50,0.08);border:1px solid rgba(220,50,50,0.25);border-radius:7px;padding:0.9rem;text-align:center;color:#ff6b6b;font-size:0.85rem;font-weight:600;margin-top:0.8rem}
+
+/* ADDRESS */
+.address-bar{background:#0f160f;border-top:1px solid rgba(255,255,255,0.06);padding:2rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.addr-block{display:flex;align-items:flex-start;gap:1rem}
+.addr-icon{font-size:1.5rem}
+.addr-title{font-size:0.72rem;font-weight:700;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;margin-bottom:0.3rem}
+.addr-line{font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6}
+.addr-flag{font-size:1.1rem}
+
+/* FOOTER CTA */
+.footer-cta{background:linear-gradient(160deg,#0a1a0a,#0f2010);border-top:1px solid rgba(200,168,75,0.12);text-align:center;padding:4.5rem 5%}
+.footer-cta h2{font-size:2.2rem;font-weight:900;margin-bottom:0.9rem;letter-spacing:-1px}
+.footer-cta p{font-size:0.92rem;color:rgba(255,255,255,0.5);margin-bottom:2rem}
+
+/* FOOTER */
+footer{background:#050a05;padding:1.8rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05)}
+.f-logo-text{font-size:1rem;font-weight:900;letter-spacing:2px}
+.f-logo-text span{color:#c8a84b}
+.f-copy{font-size:0.75rem;color:rgba(255,255,255,0.3)}
+.f-links{display:flex;gap:1.3rem}
+.f-links a{color:rgba(255,255,255,0.3);font-size:0.75rem;transition:color 0.2s}
+.f-links a:hover{color:#c8a84b}
+
+/* AI CHAT BOT */
+.chat-fab{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#c8a84b;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(200,168,75,0.4);z-index:500;border:none;transition:transform 0.2s}
+.chat-fab:hover{transform:scale(1.08)}
+.chat-fab svg{width:26px;height:26px}
+.chat-window{position:fixed;bottom:96px;right:28px;width:360px;height:500px;background:#0f160f;border:1px solid rgba(200,168,75,0.25);border-radius:16px;display:flex;flex-direction:column;z-index:500;box-shadow:0 8px 40px rgba(0,0,0,0.6);transform:scale(0.9) translateY(20px);opacity:0;pointer-events:none;transition:all 0.25s}
+.chat-window.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
+.chat-header{background:linear-gradient(135deg,#0d1a0d,#112611);border-bottom:1px solid rgba(200,168,75,0.15);padding:1rem 1.2rem;border-radius:16px 16px 0 0;display:flex;align-items:center;gap:10px}
+.chat-av{width:36px;height:36px;background:#c8a84b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.chat-title{font-size:0.88rem;font-weight:700;color:#fff}
+.chat-sub{font-size:0.7rem;color:rgba(255,255,255,0.45)}
+.chat-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,0.4);font-size:1.1rem;cursor:pointer;padding:2px 6px}
+.chat-msgs{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:0.8rem;scroll-behavior:smooth}
+.chat-msgs::-webkit-scrollbar{width:3px}
+.chat-msgs::-webkit-scrollbar-thumb{background:rgba(200,168,75,0.3);border-radius:2px}
+.msg{max-width:82%;padding:0.65rem 0.9rem;border-radius:10px;font-size:0.82rem;line-height:1.55}
+.msg-bot{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.8);align-self:flex-start;border-radius:4px 10px 10px 10px}
+.msg-user{background:#c8a84b;color:#0a0f0a;align-self:flex-end;font-weight:600;border-radius:10px 4px 10px 10px}
+.msg-typing{display:flex;gap:4px;padding:0.65rem 0.9rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:4px 10px 10px 10px;align-self:flex-start;width:52px}
+.dot{width:6px;height:6px;background:rgba(255,255,255,0.4);border-radius:50%;animation:blink 1.2s infinite}
+.dot:nth-child(2){animation-delay:0.2s}
+.dot:nth-child(3){animation-delay:0.4s}
+@keyframes blink{0%,80%,100%{opacity:0.2}40%{opacity:1}}
+.chat-quick{display:flex;flex-wrap:wrap;gap:0.4rem;padding:0.7rem 1rem;border-top:1px solid rgba(255,255,255,0.06)}
+.qbtn{background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.2);color:#c8a84b;font-size:0.7rem;font-weight:600;padding:4px 10px;border-radius:12px;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+.qbtn:hover{background:rgba(200,168,75,0.2)}
+.chat-input-wrap{display:flex;gap:0.5rem;padding:0.8rem 1rem;border-top:1px solid rgba(255,255,255,0.06)}
+.chat-input{flex:1;background:#080d08;border:1px solid rgba(255,255,255,0.09);border-radius:8px;padding:0.6rem 0.8rem;color:#fff;font-size:0.82rem;font-family:inherit;outline:none}
+.chat-input:focus{border-color:rgba(200,168,75,0.4)}
+.chat-send{background:#c8a84b;border:none;border-radius:7px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-size:0.9rem;transition:background 0.2s}
+.chat-send:hover{background:#b8943a}
+
+/* NOTIF DOT */
+.notif-dot{position:absolute;top:0;right:0;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid #0a0f0a;display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:900;color:#fff}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-wrap" onclick="scrollTo(0,0)">
+    <svg class="logo-svg" viewBox="0 0 44 44" fill="none">
+      <rect width="44" height="44" rx="8" fill="#0f160f"/>
+      <path d="M22 7C22 7 10 15 10 26c0 7 5.5 12 12 12s12-5 12-12C34 15 22 7 22 7Z" fill="#1a6b2e" opacity="0.85"/>
+      <path d="M22 7c0 0 7 10 5 21-1.5 6-3 9-5 10" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M16 27l6-8 6 8" stroke="#c8a84b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="22" cy="33" r="2" fill="#c8a84b" opacity="0.7"/>
+    </svg>
+    <div class="logo-name">
+      <div class="logo-ltm">LTM</div>
+      <div class="logo-agri">AGRI 🇲🇦</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#catalog">Catalog</a>
+    <a href="#export-ops">Export</a>
+    <a href="#quality">Quality</a>
+    <a href="#certs">Certificates</a>
+    <a href="#contact">Contact</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn" onclick="setLang('fr',this)">FR</button>
+      <button class="lang-btn" onclick="setLang('pt',this)">PT</button>
+    </div>
+    <a href="https://wa.me/212661424269" class="nav-cta">💬 WhatsApp</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🇲🇦 <span data-en="Moroccan Production · World-Class Phosphates" data-fr="Production Marocaine · Phosphates de Classe Mondiale" data-pt="Produção Marroquina · Fosfatos de Classe Mundial">Moroccan Production · World-Class Phosphates</span></div>
+    <h1><span data-en="Premium Fertilizers," data-fr="Engrais Premium," data-pt="Fertilizantes Premium,">Premium Fertilizers,</span><br/><em><span data-en="Unbeatable Prices" data-fr="Prix Imbattables" data-pt="Preços Imbatíveis">Unbeatable Prices</span></em></h1>
+    <p class="hero-desc" data-en="LTM AGRI supplies the world's finest phosphate fertilizers — TSP, DAP & NPK — produced from Morocco's legendary phosphate reserves. Certified quality. Global delivery." data-fr="LTM AGRI fournit les meilleurs engrais phosphatés au monde — TSP, DAP & NPK — produits à partir des légendaires réserves de phosphate du Maroc. Qualité certifiée. Livraison mondiale." data-pt="LTM AGRI fornece os melhores fertilizantes fosfatados do mundo — TSP, DAP & NPK — produzidos a partir das lendárias reservas de fosfato de Marrocos. Qualidade certificada. Entrega global.">LTM AGRI supplies the world's finest phosphate fertilizers — TSP, DAP & NPK — produced from Morocco's legendary phosphate reserves. Certified quality. Global delivery.</p>
+    <div class="moq-banner">⚡ <span data-en="Minimum Order Quantity:" data-fr="Quantité Minimale de Commande:" data-pt="Quantidade Mínima de Pedido:">Minimum Order Quantity:</span> <strong>1,000 MT</strong></div>
+    <div class="hero-btns">
+      <a href="https://wa.me/212661424269" class="btn-gold">💬 WhatsApp Us</a>
+      <a href="#catalog" class="btn-ghost">📋 <span data-en="View Catalog" data-fr="Voir le Catalogue" data-pt="Ver Catálogo">View Catalog</span></a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">50+</div><div class="stat-l" data-en="Countries" data-fr="Pays" data-pt="Países">Countries</div></div>
+      <div><div class="stat-n">15K+</div><div class="stat-l" data-en="Farms Supplied" data-fr="Fermes Approvisionnées" data-pt="Fazendas Abastecidas">Farms Supplied</div></div>
+      <div><div class="stat-n">20+</div><div class="stat-l" data-en="Years Experience" data-fr="Ans d'Expérience" data-pt="Anos de Experiência">Years Experience</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hcard gold">
+      <div class="hcard-top"><h3>TSP</h3><span class="hcard-tag tag-gold">Best Seller</span></div>
+      <p>Triple Super Phosphate — Moroccan origin, world-best pricing & purity</p>
+    </div>
+    <div class="hcard">
+      <div class="hcard-top"><h3>DAP</h3><span class="hcard-tag tag-green">Premium</span></div>
+      <p>Diammonium Phosphate — Root development & early crop growth</p>
+    </div>
+    <div class="hcard">
+      <div class="hcard-top"><h3>NPK</h3><span class="hcard-tag tag-green">Premium</span></div>
+      <p>Custom balanced formula — All crop types & soil profiles</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="sec-head">
+    <div class="eyebrow" data-en="Product Catalog" data-fr="Catalogue Produits" data-pt="Catálogo de Produtos">Product Catalog</div>
+    <div class="sec-title" data-en="Technical Specifications" data-fr="Spécifications Techniques" data-pt="Especificações Técnicas">Technical Specifications</div>
+    <div class="sec-sub" data-en="Full technical data sheets, application guidelines, and MOQ for each product. Bulk loading only." data-fr="Fiches techniques complètes, guides d'application et MOQ pour chaque produit. Chargement en vrac uniquement." data-pt="Fichas técnicas completas, diretrizes de aplicação e MOQ para cada produto. Apenas carregamento a granel.">Full technical data sheets, application guidelines, and MOQ for each product. Bulk loading only.</div>
+  </div>
+  <div class="catalog-tabs">
+    <button class="ctab active" onclick="showTab('tsp',this)">⭐ TSP — Best Seller</button>
+    <button class="ctab" onclick="showTab('dap',this)">DAP</button>
+    <button class="ctab" onclick="showTab('npk',this)">NPK</button>
+  </div>
+
+  <!-- TSP -->
+  <div class="catalog-panel active" id="tab-tsp">
+    <div class="prod-main pm-tsp">
+
+      <div class="prod-header">
+        <div><div class="prod-name">TSP</div><div class="prod-fullname">TRIPLE SUPER PHOSPHATE — 0-46-0</div></div>
+        <div class="prod-badges"><span class="pbadge pbadge-gold">Best Seller</span><span class="pbadge pbadge-outline">🇲🇦 Moroccan Origin</span></div>
+      </div>
+      <div class="prod-desc">LTM AGRI's flagship product. Produced from Morocco's world-renowned phosphate rock. Our TSP delivers 46% P₂O₅ guaranteed in granular form, with consistent batch quality verified by SGS or Intertek inspection. Loaded in bulk in clean containers lined with plastic sheets for maximum product integrity.</div>
+      <div class="moq-card">
+        <div><div class="moq-num">1,000 MT</div><div class="moq-label">Minimum Order</div></div>
+        <div class="moq-note">CIF / FOB / DAP available. Contact us for freight quote.</div>
+      </div>
+      <div class="prod-cta">
+        <a href="https://wa.me/212661424269?text=Hello%20LTM%20AGRI%2C%20I%20need%20a%20TSP%20bulk%20quote." class="btn-sm-gold">💬 Request TSP Quote</a>
+        <button class="btn-sm-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">📋 Send Inquiry</button>
+      </div>
+    </div>
+    <div class="prod-side">
+      <div class="tech-card">
+        <h4>Technical Data Sheet</h4>
+        <div class="tech-row"><span class="tech-key">Product</span><span class="tech-val">Triple Super Phosphate</span></div>
+        <div class="tech-row"><span class="tech-key">Grade</span><span class="tech-val gold">0 — 46 — 0</span></div>
+        <div class="tech-row"><span class="tech-key">P₂O₅ Content</span><span class="tech-val gold">46% min.</span></div>
+        <div class="tech-row"><span class="tech-key">Moisture</span><span class="tech-val">4% max.</span></div>
+        <div class="tech-row"><span class="tech-key">Cadmium (Cd)</span><span class="tech-val">&lt;20 mg/kg</span></div>
+        <div class="tech-row"><span class="tech-key">Physical Form</span><span class="tech-val gold">Granular only</span></div>
+        <div class="tech-row"><span class="tech-key">Granule Size</span><span class="tech-val">2 – 5 mm</span></div>
+        <div class="tech-row"><span class="tech-key">Colour</span><span class="tech-val">Grey / Beige</span></div>
+        <div class="tech-row"><span class="tech-key">Origin</span><span class="tech-val gold">🇲🇦 Morocco</span></div>
+        <div class="tech-row"><span class="tech-key">Inspection</span><span class="tech-val">SGS / Intertek</span></div>
+        <div class="tech-row"><span class="tech-key">Packaging</span><span class="tech-val gold">Bulk only</span></div>
+        <div class="tech-row"><span class="tech-key">Shelf Life</span><span class="tech-val">2 years (dry storage)</span></div>
+      </div>
+      <div class="use-card">
+        <h4>Best Use & Application Guide</h4>
+        <div class="use-item"><div class="use-dot">🌾</div><p><strong>Cereal crops</strong> — 150–200 kg/ha at sowing for strong root establishment and early phosphate uptake</p></div>
+        <div class="use-item"><div class="use-dot">🫒</div><p><strong>Olive & fruit trees</strong> — 200–300 kg/ha during soil preparation before planting season</p></div>
+        <div class="use-item"><div class="use-dot">🌽</div><p><strong>Maize & sorghum</strong> — Band application at planting, 100–150 kg/ha for maximum efficiency</p></div>
+        <div class="use-item"><div class="use-dot">🥬</div><p><strong>Vegetables</strong> — Pre-plant at 100–180 kg/ha; ideal for phosphorus-deficient soils</p></div>
+        <div class="use-item"><div class="use-dot">🌍</div><p><strong>Best in</strong> neutral to slightly alkaline soils (pH 6.5–7.5)</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAP -->
+  <div class="catalog-panel" id="tab-dap">
+    <div class="prod-main pm-dap">
+
+      <div class="prod-header">
+        <div><div class="prod-name">DAP</div><div class="prod-fullname">DIAMMONIUM PHOSPHATE — 18-46-0</div></div>
+        <div class="prod-badges"><span class="pbadge pbadge-outline" style="border-color:rgba(106,175,122,0.4);color:#6aaf7a">Premium Grade</span><span class="pbadge pbadge-outline" style="border-color:rgba(106,175,122,0.4);color:#6aaf7a">🇲🇦 Morocco</span></div>
+      </div>
+      <div class="prod-desc">The world's most widely used phosphate fertilizer. LTM AGRI's DAP combines high nitrogen and high phosphorus in a single granule — the most efficient starter fertilizer for broad-acre farming. Sourced from Morocco's premium production chain with guaranteed nutrient content and full traceability. Loaded in bulk only.</div>
+      <div class="moq-card">
+        <div><div class="moq-num">1,000 MT</div><div class="moq-label">Minimum Order</div></div>
+        <div class="moq-note">CIF / FOB / DAP available. Contact us for freight quote.</div>
+      </div>
+      <div class="prod-cta">
+        <a href="https://wa.me/212661424269?text=Hello%20LTM%20AGRI%2C%20I%20need%20a%20DAP%20bulk%20quote." class="btn-sm-gold">💬 Request DAP Quote</a>
+        <button class="btn-sm-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">📋 Send Inquiry</button>
+      </div>
+    </div>
+    <div class="prod-side">
+      <div class="tech-card">
+        <h4>Technical Data Sheet</h4>
+        <div class="tech-row"><span class="tech-key">Product</span><span class="tech-val">Diammonium Phosphate</span></div>
+        <div class="tech-row"><span class="tech-key">Grade</span><span class="tech-val gold">18 — 46 — 0</span></div>
+        <div class="tech-row"><span class="tech-key">N Content</span><span class="tech-val gold">18% min.</span></div>
+        <div class="tech-row"><span class="tech-key">P₂O₅ Content</span><span class="tech-val gold">46% min.</span></div>
+        <div class="tech-row"><span class="tech-key">Moisture</span><span class="tech-val">2% max.</span></div>
+        <div class="tech-row"><span class="tech-key">Cadmium (Cd)</span><span class="tech-val">&lt;20 mg/kg</span></div>
+        <div class="tech-row"><span class="tech-key">Physical Form</span><span class="tech-val">Granular</span></div>
+        <div class="tech-row"><span class="tech-key">Granule Size</span><span class="tech-val">2 – 4 mm</span></div>
+        <div class="tech-row"><span class="tech-key">pH (10% sol.)</span><span class="tech-val">7.5 – 8.5</span></div>
+        <div class="tech-row"><span class="tech-key">Origin</span><span class="tech-val gold">🇲🇦 Morocco</span></div>
+        <div class="tech-row"><span class="tech-key">Inspection</span><span class="tech-val">SGS / Intertek</span></div>
+        <div class="tech-row"><span class="tech-key">Packaging</span><span class="tech-val gold">Bulk only</span></div>
+      </div>
+      <div class="use-card">
+        <h4>Best Use & Application Guide</h4>
+        <div class="use-item"><div class="use-dot">🌾</div><p><strong>Wheat & barley</strong> — 100–150 kg/ha at sowing as a starter for vigorous root and shoot development</p></div>
+        <div class="use-item"><div class="use-dot">🌻</div><p><strong>Sunflower & canola</strong> — Pre-plant or at-planting, 120–160 kg/ha for strong early growth</p></div>
+        <div class="use-item"><div class="use-dot">🍅</div><p><strong>Tomato & vegetables</strong> — Broadcast before transplanting; 80–120 kg/ha depending on soil P levels</p></div>
+        <div class="use-item"><div class="use-dot">🌿</div><p><strong>Pastures & forage</strong> — Surface-applied at 100 kg/ha in autumn to build soil phosphorus reserves</p></div>
+        <div class="use-item"><div class="use-dot">🌍</div><p><strong>Best in</strong> acidic to neutral soils (pH 5.5–7.0). Highly soluble — rapid nutrient availability</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NPK -->
+  <div class="catalog-panel" id="tab-npk">
+    <div class="prod-main pm-npk">
+
+      <div class="prod-header">
+        <div><div class="prod-name">NPK</div><div class="prod-fullname">NITROGEN — PHOSPHORUS — POTASSIUM (CUSTOM RATIOS)</div></div>
+        <div class="prod-badges"><span class="pbadge pbadge-outline" style="border-color:rgba(106,159,207,0.4);color:#6a9fcf">Custom Ratios</span><span class="pbadge pbadge-outline" style="border-color:rgba(106,159,207,0.4);color:#6a9fcf">🇲🇦 Morocco</span></div>
+      </div>
+      <div class="prod-desc">LTM AGRI's NPK blends are available in a wide range of custom N-P-K ratios, tailored to specific crop requirements and regional agronomic standards. Compound-granulated for uniform nutrient distribution — not a simple blend. Loaded in bulk in lined containers with full inspection documentation.</div>
+      <div class="moq-card">
+        <div><div class="moq-num">1,000 MT</div><div class="moq-label">Minimum Order</div></div>
+        <div class="moq-note">Custom ratios: 4–6 week lead time. CIF / FOB / DAP available.</div>
+      </div>
+      <div class="prod-cta">
+        <a href="https://wa.me/212661424269?text=Hello%20LTM%20AGRI%2C%20I%20need%20a%20custom%20NPK%20bulk%20quote." class="btn-sm-gold">💬 Request NPK Quote</a>
+        <button class="btn-sm-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">📋 Send Inquiry</button>
+      </div>
+    </div>
+    <div class="prod-side">
+      <div class="tech-card">
+        <h4>Technical Data Sheet</h4>
+        <div class="tech-row"><span class="tech-key">Product</span><span class="tech-val">Compound NPK Fertilizer</span></div>
+        <div class="tech-row"><span class="tech-key">Available Grades</span><span class="tech-val gold">15-15-15 / 20-10-10 / 10-26-26</span></div>
+        <div class="tech-row"><span class="tech-key">N (Nitrogen)</span><span class="tech-val">10 – 25% (grade-dependent)</span></div>
+        <div class="tech-row"><span class="tech-key">P₂O₅</span><span class="tech-val">10 – 30% (grade-dependent)</span></div>
+        <div class="tech-row"><span class="tech-key">K₂O</span><span class="tech-val">10 – 30% (grade-dependent)</span></div>
+        <div class="tech-row"><span class="tech-key">Secondary Nutrients</span><span class="tech-val">S, Ca, Mg on request</span></div>
+        <div class="tech-row"><span class="tech-key">Moisture</span><span class="tech-val">2% max.</span></div>
+        <div class="tech-row"><span class="tech-key">Physical Form</span><span class="tech-val">Compound Granular</span></div>
+        <div class="tech-row"><span class="tech-key">Granule Size</span><span class="tech-val">2 – 5 mm</span></div>
+        <div class="tech-row"><span class="tech-key">Origin</span><span class="tech-val gold">🇲🇦 Morocco</span></div>
+        <div class="tech-row"><span class="tech-key">Lead Time</span><span class="tech-val">4 – 6 weeks (custom)</span></div>
+        <div class="tech-row"><span class="tech-key">Packaging</span><span class="tech-val gold">Bulk only</span></div>
+      </div>
+      <div class="use-card">
+        <h4>Best Use & Application Guide</h4>
+        <div class="use-item"><div class="use-dot">🌴</div><p><strong>Palm & banana</strong> — High-K grades (10-10-30) for fruit fill and quality; split-apply 3× per season</p></div>
+        <div class="use-item"><div class="use-dot">🌽</div><p><strong>Maize</strong> — 15-15-15 at 200–250 kg/ha for balanced nutrition throughout all growth stages</p></div>
+        <div class="use-item"><div class="use-dot">🍇</div><p><strong>Viticulture & orchards</strong> — Custom low-N, high-K blends for fruit quality and sugar content</p></div>
+        <div class="use-item"><div class="use-dot">🫘</div><p><strong>Legumes & pulses</strong> — Low-N grades (10-26-26) to complement natural N-fixation</p></div>
+        <div class="use-item"><div class="use-dot">🌍</div><p><strong>Best for</strong> intensive farming — contact us for a soil-matched recommendation</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPORT OPERATIONS -->
+<section class="export-ops" id="export-ops">
+  <div class="sec-head">
+    <div class="eyebrow">Export Operations</div>
+    <div class="sec-title">How We Load & Ship</div>
+    <div class="sec-sub">Every shipment from LTM AGRI follows a rigorous, internationally supervised export protocol — from product analysis to container sealing.</div>
+  </div>
+  <div class="export-ops-grid">
+    <div class="export-text">
+      <p>At LTM AGRI, every export operation is conducted under the full supervision of internationally recognized inspection companies — <strong>SGS</strong> or <strong>Intertek</strong> — guaranteeing that what leaves our facility matches exactly what was agreed in the contract, in terms of quantity, quality, and condition.</p>
+      <p>Before and during each loading operation, we conduct a comprehensive <strong>product analysis</strong> through accredited international laboratories. Every batch receives a <strong>Certificate of Analysis (COA)</strong> confirming nutrient content, moisture levels, granulometry, and heavy metal compliance — valid for port acceptance in 100+ countries.</p>
+      <p>All our products are loaded <strong>in bulk</strong>. Prior to loading, each container is thoroughly cleaned and inspected. The entire inner surface is then lined with heavy-duty <strong>plastic liner sheets</strong>, protecting the product from moisture, contamination, and container walls — ensuring product integrity from loading to destination port.</p>
+      <div class="export-badges">
+        <span class="exp-badge">✅ SGS Supervised</span>
+        <span class="exp-badge">✅ Intertek Certified</span>
+        <span class="exp-badge">✅ Intl. Lab Analysis</span>
+        <span class="exp-badge">✅ Bulk Loading</span>
+        <span class="exp-badge">✅ Plastic-Lined Containers</span>
+        <span class="exp-badge">✅ Full Documentation</span>
+      </div>
+    </div>
+    <div class="export-steps">
+      <div class="exp-step"><div class="exp-step-num">1</div><div><h5>Product Sampling & Lab Analysis</h5><p>Each batch is sampled and tested by an accredited international laboratory before loading begins. COA issued.</p></div></div>
+      <div class="exp-step"><div class="exp-step-num">2</div><div><h5>Container Inspection & Cleaning</h5><p>All containers are inspected for structural integrity, odors, and contamination. Cleaned and certified fit for food-grade cargo.</p></div></div>
+      <div class="exp-step"><div class="exp-step-num">3</div><div><h5>Plastic Liner Installation</h5><p>Heavy-duty plastic liner sheets cover the full inner surface of each container — floor, walls, and ceiling — before any product enters.</p></div></div>
+      <div class="exp-step"><div class="exp-step-num">4</div><div><h5>Supervised Bulk Loading by Conveyor</h5><p>Product is loaded via conveyor belt under continuous SGS/Intertek supervision. Weight and flow are monitored in real time.</p></div></div>
+      <div class="exp-step"><div class="exp-step-num">5</div><div><h5>Sealing & Full Documentation</h5><p>Containers are sealed, SGS/Intertek report issued. Full doc pack: COA, COO, Inspection Report, BL, Phytosanitary Cert.</p></div></div>
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <div class="video-title">📹 Bulk Loading in Action</div>
+  <div class="video-grid">
+    <div class="vid-card" onclick="openVideo('https://www.youtube.com/embed/search?q=TSP+fertilizer+bulk+loading+conveyor+container')">
+      <div style="width:100%;height:130px;background:linear-gradient(135deg,#1a2a1a,#0f1a0f);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+        <div style="font-size:2.5rem">🚢</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">Bulk Loading Operation</div>
+      </div>
+      <div class="vid-overlay"><div class="vid-play">▶</div></div>
+      <div class="vid-info"><div class="vid-label">TSP Bulk Loading — Conveyor to Container</div><div class="vid-sub">Supervised by SGS · Plastic-lined containers</div></div>
+    </div>
+    <div class="vid-card" onclick="openVideo('https://www.youtube.com/embed/search?q=phosphate+fertilizer+container+plastic+liner+loading')">
+      <div style="width:100%;height:130px;background:linear-gradient(135deg,#1a1a2a,#0f0f1a);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+        <div style="font-size:2.5rem">📦</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">Container Liner Process</div>
+      </div>
+      <div class="vid-overlay"><div class="vid-play">▶</div></div>
+      <div class="vid-info"><div class="vid-label">Container Plastic Liner Installation</div><div class="vid-sub">Full inner coverage · Moisture protection</div></div>
+    </div>
+    <div class="vid-card" onclick="openVideo('https://www.youtube.com/embed/search?q=SGS+inspection+fertilizer+export+loading')">
+      <div style="width:100%;height:130px;background:linear-gradient(135deg,#2a1a1a,#1a0f0f);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+        <div style="font-size:2.5rem">🔬</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">SGS Inspection</div>
+      </div>
+      <div class="vid-overlay"><div class="vid-play">▶</div></div>
+      <div class="vid-info"><div class="vid-label">SGS / Intertek Inspection Process</div><div class="vid-sub">Quality control · Lab analysis · Certification</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="vid-modal" id="vidModal" onclick="closeVideo(event)">
+  <div class="vid-modal-inner">
+    <button class="vid-close" onclick="closeVideo()">✕</button>
+    <iframe id="vidFrame" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- EXPORT MAP -->
+<section class="export-map" id="map">
+  <div class="sec-head">
+    <div class="eyebrow">Global Reach</div>
+    <div class="sec-title">Our Export Destinations</div>
+    <div class="sec-sub">LTM AGRI ships bulk fertilizers to key agricultural markets across 5 continents. Our primary export destinations include:</div>
+  </div>
+  <div class="map-wrap">
+    <div id="worldmap" style="width:100%;position:relative;background:#080d08;border-radius:10px;overflow:hidden"></div>
+    <div class="map-countries" style="margin-top:1.2rem">
+      <span class="mc">🇲🇦 Morocco — Origin</span>
+      <span class="mc">🇧🇷 Brazil</span>
+      <span class="mc">🇦🇷 Argentina</span>
+      <span class="mc">🇮🇩 Indonesia</span>
+      <span class="mc">🇦🇺 Australia</span>
+      <span class="mc">🇳🇿 New Zealand</span>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="quality" id="quality">
+  <div class="sec-head">
+    <div class="eyebrow">Moroccan Quality</div>
+    <div class="sec-title">Why Moroccan Phosphate Leads the World</div>
+    <div class="sec-sub">Morocco holds over 70% of the world's known phosphate reserves — an unmatched geological advantage that translates into fertilizer quality and pricing.</div>
+  </div>
+  <div class="quality-grid">
+    <div class="q-stats">
+      <div class="qs"><div class="qs-num">70%</div><div class="qs-text">of all known global phosphate reserves are in Morocco</div></div>
+      <div class="qs"><div class="qs-num">46%</div><div class="qs-text">P₂O₅ content in our TSP — among the highest purity levels globally</div></div>
+      <div class="qs"><div class="qs-num">100+</div><div class="qs-text">countries import Moroccan phosphate fertilizers annually</div></div>
+      <div class="qs"><div class="qs-num">#1</div><div class="qs-text">Morocco is the world's leading phosphate exporter by volume</div></div>
+    </div>
+    <div class="q-points">
+      <div class="qp"><div class="qp-ico">🔬</div><div><h4>Exceptional Purity Standards</h4><p>Moroccan phosphate rock has naturally low cadmium and exceptional chemical consistency, meeting the strictest international agricultural and food-chain safety standards.</p></div></div>
+      <div class="qp"><div class="qp-ico">⚙️</div><div><h4>Advanced Processing</h4><p>State-of-the-art facilities convert raw phosphate into finished fertilizers with precise nutrient ratios, consistent granulometry, and guaranteed purity.</p></div></div>
+      <div class="qp"><div class="qp-ico">🌍</div><div><h4>Trusted by 100+ Nations</h4><p>From sub-Saharan Africa to South Asia and Latin America, Moroccan fertilizers are the trusted standard for high-yield agriculture.</p></div></div>
+      <div class="qp"><div class="qp-ico">📋</div><div><h4>Full Traceability</h4><p>Every batch ships with: COA, Certificate of Origin, SGS/Intertek inspection report, phytosanitary cert, and bill of lading.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section class="certs" id="certs">
+  <div class="sec-head">
+    <div class="eyebrow">Certifications</div>
+    <div class="sec-title">Internationally Certified</div>
+    <div class="sec-sub">Every product meets the most rigorous global agricultural, environmental, and quality management standards.</div>
+  </div>
+  <div class="certs-grid">
+    <div class="cert"><div class="cert-ico">🏅</div><div class="cert-name">ISO 9001:2015</div><div class="cert-desc">Quality Management System ensuring consistent product quality across all batches</div><div class="cert-badge">Certified</div></div>
+    <div class="cert"><div class="cert-ico">🌱</div><div class="cert-name">ISO 14001</div><div class="cert-desc">Environmental Management — responsible production with minimal ecological impact</div><div class="cert-badge">Certified</div></div>
+    <div class="cert"><div class="cert-ico">🇪🇺</div><div class="cert-name">EU Reg. 2019/1009</div><div class="cert-desc">Compliant with EU Fertiliser Regulation — approved for all European Union markets</div><div class="cert-badge">Compliant</div></div>
+    <div class="cert"><div class="cert-ico">🔬</div><div class="cert-name">AOAC Analysis</div><div class="cert-desc">Official lab-certified nutrient analysis per AOAC methods for every batch</div><div class="cert-badge">Verified</div></div>
+    <div class="cert"><div class="cert-ico">🔍</div><div class="cert-name">SGS / Intertek</div><div class="cert-desc">Third-party pre-shipment quality inspection by globally recognized independent bodies</div><div class="cert-badge">Inspected</div></div>
+    <div class="cert"><div class="cert-ico">🚢</div><div class="cert-name">ISPM 15 Compliant</div><div class="cert-desc">Phytosanitary packaging standards — accepted at ports in 190+ countries</div><div class="cert-badge">Compliant</div></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-band">
+  <div class="stats-inner">
+    <div><div class="sb-n">15,000+</div><div class="sb-l">Farms Supplied</div></div>
+    <div><div class="sb-n">50+</div><div class="sb-l">Countries Exported</div></div>
+    <div><div class="sb-n">500K+</div><div class="sb-l">Tons / Year</div></div>
+    <div><div class="sb-n">1,000 MT</div><div class="sb-l">Min. Order Qty</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="sec-head"><div class="eyebrow">Testimonials</div><div class="sec-title">Trusted by Buyers Worldwide</div></div>
+  <div class="testi-grid">
+    <div class="tc"><div class="tc-stars">★★★★★</div><div class="tc-text">"LTM AGRI's TSP is the best we've sourced globally. Purity is exceptional and their pricing is something no other supplier has come close to matching."</div><div class="tc-author"><div class="tc-av">AK</div><div><div class="tc-name">Ahmed Khalil</div><div class="tc-loc">Farm Director — Egypt</div></div></div></div>
+    <div class="tc"><div class="tc-stars">★★★★★</div><div class="tc-text">"Five years importing Moroccan DAP through LTM AGRI. Consistent quality, reliable shipments, SGS reports always on time. Our go-to supplier."</div><div class="tc-author"><div class="tc-av">MB</div><div><div class="tc-name">Maria Barbosa</div><div class="tc-loc">Procurement Manager — Brazil</div></div></div></div>
+    <div class="tc"><div class="tc-stars">★★★★★</div><div class="tc-text">"Moroccan TSP from LTM AGRI transformed our cooperative's yield results. High P₂O₅, clean granules, and documentation always ready for customs."</div><div class="tc-author"><div class="tc-av">RS</div><div><div class="tc-name">Rajiv Sharma</div><div class="tc-loc">Cooperative Manager — India</div></div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="sec-head">
+    <div class="eyebrow">Contact</div>
+    <div class="sec-title">Request a Bulk Quote</div>
+    <div class="sec-sub">High-volume inquiries only. Minimum 1,000 MT per product. We respond within the same business day.</div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <a href="https://wa.me/212661424269" class="ci">
+        <div class="ci-ico ci-wa">💬</div>
+        <div><div class="ci-label">WhatsApp</div><div class="ci-val">+212 661 42 42 69</div><div class="ci-sub">Fastest response — usually within hours</div></div>
+      </a>
+      <a href="tel:+212661424269" class="ci">
+        <div class="ci-ico ci-ph">📞</div>
+        <div><div class="ci-label">Call Us</div><div class="ci-val">+212 661 42 42 69</div><div class="ci-sub">Morocco GMT+1 — business hours</div></div>
+      </a>
+      <div class="direct-btns">
+        <a href="https://wa.me/212661424269?text=Hello%20LTM%20AGRI%2C%20I%20want%20to%20request%20a%20bulk%20fertilizer%20quote." class="wa-btn">💬 Message on WhatsApp</a>
+        <a href="tel:+212661424269" class="call-btn">📞 +212 661 42 42 69</a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>📋 Bulk Inquiry Form</h3>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name *</label><input type="text" id="f-name" placeholder="Your name"/></div>
+        <div class="form-group"><label>Company *</label><input type="text" id="f-company" placeholder="Company name"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email *</label><input type="email" id="f-email" placeholder="email@company.com"/></div>
+        <div class="form-group"><label>Phone / WhatsApp *</label><input type="tel" id="f-phone" placeholder="+1 234 567 890"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Product *</label>
+          <select id="f-product">
+            <option value="">Select product</option>
+            <option>TSP — Triple Super Phosphate</option>
+            <option>DAP — Diammonium Phosphate</option>
+            <option>NPK — Custom Ratio</option>
+            <option>Multiple products</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Volume (MT) *</label>
+          <select id="f-volume">
+            <option value="">Select volume</option>
+            <option>1,000 – 5,000 MT</option>
+            <option>5,000 – 10,000 MT</option>
+            <option>10,000 – 25,000 MT</option>
+            <option>25,000+ MT</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Destination Country *</label><input type="text" id="f-dest" placeholder="Country / Port"/></div>
+        <div class="form-group"><label>Incoterm</label>
+          <select id="f-inco">
+            <option value="">Preferred term</option>
+            <option>FOB — Free on Board</option>
+            <option>CIF — Cost Insurance Freight</option>
+            <option>DAP — Delivered at Place</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group"><label>Additional Notes</label><textarea id="f-notes" placeholder="Delivery timeline, specific grade, custom NPK ratio, etc."></textarea></div>
+      <button class="form-submit" id="f-submit" onclick="submitForm()">📩 Submit Bulk Inquiry</button>
+      <div class="form-note">MOQ: 1,000 MT per product · Inquiry sent to karam.zahran@gmail.com</div>
+      <div class="form-success" id="form-success">✅ Inquiry received! Our team will contact you within 1 business day.</div>
+      <div class="form-error" id="form-error">❌ Please fill in all required fields before submitting.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS BAR -->
+<div class="address-bar">
+  <div class="addr-block">
+    <div class="addr-icon">📍</div>
+    <div>
+      <div class="addr-title">Our Address</div>
+      <div class="addr-line"><strong>LTM AGRI</strong><br/>Grand Industrial Zone of Casablanca<br/>Casablanca — Morocco 🇲🇦</div>
+    </div>
+  </div>
+  <div class="addr-block">
+    <div class="addr-icon">📞</div>
+    <div>
+      <div class="addr-title">Direct Line</div>
+      <div class="addr-line">+212 661 42 42 69</div>
+    </div>
+  </div>
+  <div class="addr-block">
+    <div class="addr-icon">✉️</div>
+    <div>
+      <div class="addr-title">Email</div>
+      <div class="addr-line">karam.zahran@gmail.com</div>
+    </div>
+  </div>
+  <div class="addr-block">
+    <div class="addr-icon">🕐</div>
+    <div>
+      <div class="addr-title">Business Hours</div>
+      <div class="addr-line">Mon – Fri: 9:00 – 18:00<br/>Morocco Time (GMT+1)</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <h2>Morocco's Best Fertilizers,<br/>Direct to Your Market</h2>
+  <p>TSP · DAP · NPK — Certified Moroccan quality · Unbeatable bulk pricing · MOQ 1,000 MT</p>
+  <a href="https://wa.me/212661424269" class="btn-gold">💬 Get a Bulk Quote on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;gap:8px">
+    <svg width="28" height="28" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="8" fill="#0f160f"/><path d="M22 7c0 0-12 8-12 19 0 7 5.5 12 12 12s12-5 12-12C34 15 22 7 22 7Z" fill="#1a6b2e" opacity="0.85"/><path d="M22 7c0 0 7 10 5 21" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round"/><path d="M16 27l6-8 6 8" stroke="#c8a84b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <div class="f-logo-text">LTM <span>AGRI</span> 🇲🇦</div>
+  </div>
+  <div class="f-copy">© 2026 LTM AGRI — Grand Industrial Zone, Casablanca, Morocco</div>
+  <div class="f-links">
+    <a href="#catalog">Catalog</a><a href="#export-ops">Export</a><a href="#quality">Quality</a><a href="#contact">Contact</a>
+    <a href="https://wa.me/212661424269">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- AI CHAT BOT -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()">
+  <div class="notif-dot" id="notifDot">1</div>
+  <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 2C6.925 2 2 6.477 2 12c0 2.09.638 4.03 1.73 5.64L2 22l4.683-1.668A11.07 11.07 0 0013 22c6.075 0 11-4.477 11-10S19.075 2 13 2Z" fill="#0a0f0a" stroke="#0a0f0a" stroke-width="1"/>
+    <circle cx="8.5" cy="12" r="1.5" fill="#0a0f0a"/>
+    <circle cx="13" cy="12" r="1.5" fill="#0a0f0a"/>
+    <circle cx="17.5" cy="12" r="1.5" fill="#0a0f0a"/>
+  </svg>
+</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-av">🌱</div>
+    <div><div class="chat-title">LTM AGRI Assistant</div><div class="chat-sub">Ask about products, pricing & export</div></div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="msg msg-bot">Hello! 👋 Welcome to <strong>LTM AGRI</strong>. I can help you with product specs, pricing, MOQ, export operations, or certificates. How can I assist you?</div>
+  </div>
+  <div class="chat-quick" id="quickBtns">
+    <button class="qbtn" onclick="quickAsk('What products do you offer?')">Products</button>
+    <button class="qbtn" onclick="quickAsk('What is the MOQ?')">MOQ</button>
+    <button class="qbtn" onclick="quickAsk('Tell me about TSP')">TSP Info</button>
+    <button class="qbtn" onclick="quickAsk('How do you load and ship?')">Shipping</button>
+    <button class="qbtn" onclick="quickAsk('What certificates do you have?')">Certificates</button>
+    <button class="qbtn" onclick="quickAsk('How can I get a quote?')">Get Quote</button>
+  </div>
+  <div class="chat-input-wrap">
+    <input class="chat-input" id="chatInput" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendChat()"/>
+    <button class="chat-send" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<script>
+/* ===== WORLD MAP ===== */
+async function buildMap(){
+  const el=document.getElementById('worldmap');
+  const W=el.offsetWidth||800,H=Math.round(W*0.52);
+  el.style.height=H+'px';
+
+  const [d3mod,topo]=await Promise.all([
+    import('https://cdn.jsdelivr.net/npm/d3@7/+esm'),
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r=>r.json())
+  ]);
+  const {select,geoNaturalEarth1,geoPath,json,path}=d3mod;
+  const TopoJSON=await import('https://cdn.jsdelivr.net/npm/topojson-client@3/+esm');
+
+  const svg=select(el).append('svg').attr('width',W).attr('height',H);
+  const proj=geoNaturalEarth1().scale(W/6.1).translate([W/2,H/2]);
+  const pathGen=geoPath().projection(proj);
+
+  const countries=TopoJSON.feature(topo,topo.objects.countries);
+  svg.append('g').selectAll('path')
+    .data(countries.features)
+    .join('path')
+    .attr('d',pathGen)
+    .attr('fill','#1a2a1a')
+    .attr('stroke','rgba(255,255,255,0.07)')
+    .attr('stroke-width',0.4);
+
+  // Graticule
+  const {geoGraticule}=d3mod;
+  svg.append('path').datum(geoGraticule()()).attr('d',pathGen)
+    .attr('fill','none').attr('stroke','rgba(255,255,255,0.03)').attr('stroke-width',0.5);
+
+  // Points: [lon, lat]
+  const origin={lon:-7.09,lat:31.79,label:'🇲🇦 MOROCCO',sub:'Origin'};
+  const dests=[
+    {lon:-51.9,lat:-14.2,label:'🇧🇷 Brazil'},
+    {lon:-64.0,lat:-34.0,label:'🇦🇷 Argentina'},
+    {lon:113.9,lat:-0.8,label:'🇮🇩 Indonesia'},
+    {lon:133.8,lat:-25.3,label:'🇦🇺 Australia'},
+    {lon:172.5,lat:-40.9,label:'🇳🇿 New Zealand'},
+  ];
+
+  const op=proj([origin.lon,origin.lat]);
+
+  // Draw animated arcs
+  const arcG=svg.append('g');
+  dests.forEach(d=>{
+    const dp=proj([d.lon,d.lat]);
+    const mx=(op[0]+dp[0])/2, my=Math.min(op[1],dp[1])-Math.abs(dp[0]-op[0])*0.18;
+    const pathStr=`M${op[0]},${op[1]} Q${mx},${my} ${dp[0]},${dp[1]}`;
+    // shadow arc
+    arcG.append('path').attr('d',pathStr).attr('fill','none')
+      .attr('stroke','rgba(200,168,75,0.12)').attr('stroke-width',2);
+    // animated arc
+    const arc=arcG.append('path').attr('d',pathStr).attr('fill','none')
+      .attr('stroke','#c8a84b').attr('stroke-width',1.2).attr('opacity',0.6)
+      .attr('stroke-dasharray','6,5');
+    const len=arc.node().getTotalLength();
+    arc.attr('stroke-dasharray',`${len} ${len}`).attr('stroke-dashoffset',len)
+      .transition().duration(2000).delay(300).ease(x=>x).attr('stroke-dashoffset',0)
+      .transition().duration(0).attr('stroke-dasharray','6,5');
+  });
+
+  // Origin pulse rings
+  const pulse=svg.append('g');
+  [14,22].forEach((r,i)=>{
+    pulse.append('circle').attr('cx',op[0]).attr('cy',op[1]).attr('r',r)
+      .attr('fill','none').attr('stroke','#c8a84b')
+      .attr('stroke-width',i===0?1.2:0.6).attr('opacity',i===0?0.35:0.15);
+  });
+  svg.append('circle').attr('cx',op[0]).attr('cy',op[1]).attr('r',6)
+    .attr('fill','#c8a84b').attr('opacity',0.95);
+  svg.append('text').attr('x',op[0]+10).attr('y',op[1]-8)
+    .attr('fill','#c8a84b').attr('font-size',9).attr('font-weight','700')
+    .attr('font-family','Segoe UI').text('MOROCCO');
+  svg.append('text').attr('x',op[0]+10).attr('y',op[1]+2)
+    .attr('fill','#c8a84b').attr('font-size',7).attr('opacity',0.6)
+    .attr('font-family','Segoe UI').text('(Origin)');
+
+  // Destination dots + labels
+  dests.forEach(d=>{
+    const dp=proj([d.lon,d.lat]);
+    svg.append('circle').attr('cx',dp[0]).attr('cy',dp[1]).attr('r',10)
+      .attr('fill','none').attr('stroke','#25d366').attr('stroke-width',1).attr('opacity',0.3);
+    svg.append('circle').attr('cx',dp[0]).attr('cy',dp[1]).attr('r',5)
+      .attr('fill','#25d366').attr('opacity',0.9);
+    const anchor=dp[0]>W/2?'end':'start';
+    const xoff=dp[0]>W/2?-13:13;
+    svg.append('text').attr('x',dp[0]+xoff).attr('y',dp[1]+4)
+      .attr('fill','#25d366').attr('font-size',8.5).attr('font-weight','700')
+      .attr('font-family','Segoe UI').attr('text-anchor',anchor).text(d.label);
+  });
+
+  // Legend
+  const lg=svg.append('g').attr('transform',`translate(16,${H-28})`);
+  lg.append('circle').attr('r',5).attr('fill','#c8a84b');
+  lg.append('text').attr('x',10).attr('y',4).attr('fill','#c8a84b').attr('font-size',8).attr('font-family','Segoe UI').text('Origin');
+  lg.append('circle').attr('cx',70).attr('r',5).attr('fill','#25d366');
+  lg.append('text').attr('x',80).attr('y',4).attr('fill','#25d366').attr('font-size',8).attr('font-family','Segoe UI').text('Export Destination');
+}
+buildMap();
+
+/* ===== TABS ===== */
+function showTab(id,btn){
+  document.querySelectorAll('.catalog-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ===== LANGUAGE ===== */
+function setLang(lang,btn){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const t=el.getAttribute('data-'+lang)||el.getAttribute('data-en');
+    if(el.children.length===0)el.textContent=t;
+  });
+}
+
+/* ===== VIDEO ===== */
+function openVideo(url){
+  document.getElementById('vidFrame').src=url;
+  document.getElementById('vidModal').classList.add('open');
+}
+function closeVideo(e){
+  if(!e||e.target===document.getElementById('vidModal')||e.currentTarget.classList.contains('vid-close')){
+    document.getElementById('vidModal').classList.remove('open');
+    document.getElementById('vidFrame').src='';
+  }
+}
+
+/* ===== FORM ===== */
+async function submitForm(){
+  const fields=['f-name','f-company','f-email','f-phone','f-product','f-volume','f-dest'];
+  const vals={};
+  let ok=true;
+  fields.forEach(id=>{const el=document.getElementById(id);if(!el.value){ok=false;el.style.borderColor='rgba(220,50,50,0.5)'}else{el.style.borderColor='';vals[id.replace('f-','')]=el.value}});
+  vals.notes=document.getElementById('f-notes').value;
+  vals.inco=document.getElementById('f-inco').value;
+  if(!ok){document.getElementById('form-error').style.display='block';setTimeout(()=>document.getElementById('form-error').style.display='none',4000);return;}
+  document.getElementById('form-error').style.display='none';
+  const btn=document.getElementById('f-submit');
+  btn.disabled=true;btn.textContent='Sending...';
+  const body=`LTM AGRI Bulk Inquiry\n\nName: ${vals.name}\nCompany: ${vals.company}\nEmail: ${vals.email}\nPhone: ${vals.phone}\nProduct: ${vals.product}\nVolume: ${vals.volume}\nDestination: ${vals.destination}\nIncoterm: ${vals.inco}\nNotes: ${vals.notes}`;
+  try{
+    await fetch(`https://formsubmit.co/ajax/karam.zahran@gmail.com`,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:vals.name,email:vals.email,message:body,_subject:'LTM AGRI — New Bulk Inquiry from '+vals.name})});
+    document.getElementById('form-success').style.display='block';
+    fields.forEach(id=>document.getElementById(id).value='');
+    document.getElementById('f-notes').value='';document.getElementById('f-inco').value='';
+  }catch(e){document.getElementById('form-success').style.display='block';}
+  btn.disabled=false;btn.innerHTML='📩 Submit Bulk Inquiry';
+  setTimeout(()=>document.getElementById('form-success').style.display='none',7000);
+}
+
+/* ===== AI CHAT ===== */
+const KB={
+  products:"We offer 3 premium Moroccan-origin fertilizers:\n\n🏆 **TSP** (Triple Super Phosphate) — 0-46-0, our best seller, granular, 46% P₂O₅\n🌾 **DAP** (Diammonium Phosphate) — 18-46-0, 18% N + 46% P\n🌿 **NPK** — Compound granular, custom ratios (15-15-15, 20-10-10, 10-26-26 and more)\n\nAll products are loaded in bulk only. MOQ: 1,000 MT.",
+  tsp:"**TSP — Triple Super Phosphate (0-46-0)**\n\nOur flagship product and best seller. Key specs:\n• P₂O₅: 46% min\n• Form: Granular only (2–5mm)\n• Moisture: 4% max\n• Cadmium: <20 mg/kg\n• Origin: 🇲🇦 Morocco\n• Packaging: Bulk only\n• MOQ: 1,000 MT\n\nBest for cereal crops, olive/fruit trees, maize, vegetables. Ideal at pH 6.5–7.5.",
+  dap:"**DAP — Diammonium Phosphate (18-46-0)**\n\nKey specs:\n• N: 18% min, P₂O₅: 46% min\n• Form: Granular (2–4mm)\n• Moisture: 2% max\n• Origin: 🇲🇦 Morocco\n• Packaging: Bulk only\n• MOQ: 1,000 MT\n\nBest for wheat, barley, sunflower, tomatoes. Ideal at pH 5.5–7.0.",
+  npk:"**NPK — Compound Granular (Custom Ratios)**\n\nAvailable grades: 15-15-15, 20-10-10, 10-26-26 and more\n• All nutrients per granule (compound, not blended)\n• Moisture: 2% max\n• Custom ratios: 4–6 week lead time\n• Origin: 🇲🇦 Morocco\n• Packaging: Bulk only\n• MOQ: 1,000 MT\n\nBest for maize, palm, banana, viticulture, legumes.",
+  moq:"Our **Minimum Order Quantity is 1,000 MT per product**. We supply high-volume bulk orders only. Available incoterms: FOB, CIF, DAP. For custom NPK ratios, allow 4–6 weeks lead time.",
+  shipping:"**LTM AGRI Export Operations:**\n\n1. Product sampled and tested by international accredited lab (COA issued)\n2. Container inspected, cleaned, and certified\n3. Heavy-duty plastic liner sheets installed on all inner surfaces\n4. Product loaded via conveyor belt in bulk\n5. Full SGS or Intertek supervision throughout\n6. Container sealed and full documentation issued\n\nDoc pack: COA, Certificate of Origin, Inspection Report, Bill of Lading, Phytosanitary Certificate.",
+  certs:"**Our Certifications:**\n\n🏅 ISO 9001:2015 — Quality Management\n🌱 ISO 14001 — Environmental Management\n🇪🇺 EU Fertiliser Regulation 2019/1009 — Compliant\n🔬 AOAC Analysis — Per batch\n🔍 SGS / Intertek — Pre-shipment inspection\n🚢 ISPM 15 — Phytosanitary packaging",
+  quote:"To get a bulk quote, you can:\n\n💬 **WhatsApp us directly:** +212 661 42 42 69\n📞 **Call us:** +212 661 42 42 69\n📋 **Fill in our inquiry form** on this page\n\nPlease include: product needed, volume (MT), destination country, and preferred incoterm (FOB/CIF/DAP). MOQ: 1,000 MT.",
+  contact:"📍 **LTM AGRI**\nGrand Industrial Zone of Casablanca\nCasablanca, Morocco 🇲🇦\n\n📞 +212 661 42 42 69\n💬 WhatsApp: +212 661 42 42 69\n✉️ karam.zahran@gmail.com\n\nBusiness hours: Mon–Fri, 9:00–18:00 GMT+1",
+  destinations:"We currently export to: 🇧🇷 Brazil, 🇦🇷 Argentina, 🇮🇩 Indonesia, 🇦🇺 Australia, and 🇳🇿 New Zealand — as well as 50+ other countries worldwide.",
+  price:"Pricing depends on product, volume, destination, and incoterm. We offer the most competitive market prices for Moroccan-origin TSP, DAP, and NPK. Please contact us via WhatsApp (+212 661 42 42 69) or our inquiry form for a tailored quote."
+};
+
+function getReply(q){
+  const l=q.toLowerCase();
+  if(l.includes('tsp')||l.includes('triple'))return KB.tsp;
+  if(l.includes('dap')||l.includes('diammon'))return KB.dap;
+  if(l.includes('npk')||l.includes('nitrogen'))return KB.npk;
+  if(l.includes('product')||l.includes('offer')||l.includes('sell')||l.includes('fertilizer'))return KB.products;
+  if(l.includes('moq')||l.includes('minimum')||l.includes('quantity'))return KB.moq;
+  if(l.includes('ship')||l.includes('load')||l.includes('bulk')||l.includes('container')||l.includes('export operation'))return KB.shipping;
+  if(l.includes('cert')||l.includes('iso')||l.includes('sgs')||l.includes('intertek'))return KB.certs;
+  if(l.includes('quote')||l.includes('price')||l.includes('cost')||l.includes('how much'))return KB.price;
+  if(l.includes('contact')||l.includes('address')||l.includes('reach')||l.includes('email')||l.includes('phone'))return KB.contact;
+  if(l.includes('countr')||l.includes('brazil')||l.includes('australia')||l.includes('indonesia')||l.includes('argentina')||l.includes('zealand')||l.includes('destination'))return KB.destinations;
+  if(l.includes('quot')||l.includes('order')||l.includes('inquir'))return KB.quote;
+  return "Thank you for your question! For the most accurate answer, please contact our team directly:\n\n💬 WhatsApp: +212 661 42 42 69\n✉️ karam.zahran@gmail.com\n\nOr use the inquiry form on this page — we respond within 1 business day.";
+}
+
+function addMsg(text,isUser){
+  const msgs=document.getElementById('chatMsgs');
+  const d=document.createElement('div');
+  d.className='msg '+(isUser?'msg-user':'msg-bot');
+  d.innerHTML=text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br/>');
+  msgs.appendChild(d);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+function addTyping(){
+  const msgs=document.getElementById('chatMsgs');
+  const d=document.createElement('div');
+  d.className='msg-typing';d.id='typing';
+  d.innerHTML='<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+  return d;
+}
+function sendChat(){
+  const inp=document.getElementById('chatInput');
+  const q=inp.value.trim();if(!q)return;
+  addMsg(q,true);inp.value='';
+  const t=addTyping();
+  setTimeout(()=>{t.remove();addMsg(getReply(q),false);},900+Math.random()*500);
+}
+function quickAsk(q){
+  addMsg(q,true);
+  const t=addTyping();
+  setTimeout(()=>{t.remove();addMsg(getReply(q),false);},800+Math.random()*400);
+}
+function toggleChat(){
+  const w=document.getElementById('chatWindow');
+  const dot=document.getElementById('notifDot');
+  w.classList.toggle('open');
+  if(w.classList.contains('open')){dot.style.display='none';}
+}
+// Show notif after 3s
+setTimeout(()=>{
+  const dot=document.getElementById('notifDot');
+  if(!document.getElementById('chatWindow').classList.contains('open'))dot.style.display='flex';
+},3000);
+</script>
+</body>
+</html>
